@@ -1,27 +1,137 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinola</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/estilo.css" rel="stylesheet" type="text/css" >
+		<script type="text/javascript" defer src="js/acao.js"> </script> 
+		<title>Spinola</title>
+	</head>
+	<body>
+		<nav class="menuHorizontal" aria-label="Menu principal">
+			<a href="index.html" class="menuLogo">
+				<img src="img/Spinolacoisas/Logo/Logos%20Color%C3%ADdos/Cor%20png/Logo%20Principal.png" alt="Spinola">
+			</a>
+			<input type="checkbox" id="menuControleInicio" class="menuControle">
+			<label for="menuControleInicio" class="menuSanduiche" aria-label="Abrir menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<section class="menuLinks">
+				<a href="index.html" class="menuItem ativo">Inicio</a>
+				<a href="sobre.html" class="menuItem">Sobre</a>
+				<a href="solucoes.html" class="menuItem">Solu&ccedil;&otilde;es</a>
+				<a href="contato.html" class="menuItem">Contato</a>
+			</section>
+		</nav>
 
-    <main>
-        <h1>texto</h1>
-        <p>texto</p>
+		<main class="conteudoPrincipal">
+			<img id="moldura" src="img/quadro1.png" alt="Tela do carrossel Spinola">
+			<section class="grupoBotao">
+				<button id="btnVoltar" class="botao" type="button" aria-label="Tela anterior">&lt;</button>
+				<button id="btnAvancar" class="botao" type="button" aria-label="Proxima tela">&gt;</button>
+			</section>		
+		</main>
 
-    </main>
+		<section class="oQueFazemos">
+			<section class="fazemosCabecalho">
+				<h1>Quatro frentes, um s&oacute; ecossistema</h1>
+				<h2>Integramos diferentes tecnologias para que tudo funcione de forma simples, controlado pela palma da m&atilde;o.</h2>
+			</section>
 
-</body>
+			<section class="frentes">
+				<section class="frente">
+					<span>01</span>
+					<h3>Residencial</h3>
+					<p>Casas inteligentes: ilumina&ccedil;&atilde;o, climatiza&ccedil;&atilde;o, cortinas e cenas controladas por app ou voz.</p>
+				</section>
+				<section class="frente">
+					<span>02</span>
+					<h3>Comercial &amp; Predial</h3>
+					<p>Efici&ecirc;ncia energ&eacute;tica, automa&ccedil;&atilde;o de ambientes e controle de acesso para empresas e condom&iacute;nios.</p>
+				</section>
+				<section class="frente">
+					<span>03</span>
+					<h3>Industrial</h3>
+					<p>Pain&eacute;is, CLPs, sensores e sistemas supervis&oacute;rios para processos produtivos confi&aacute;veis.</p>
+				</section>
+				<section class="frente">
+					<span>04</span>
+					<h3>Seguran&ccedil;a</h3>
+					<p>CFTV, alarmes, cercas el&eacute;tricas e port&otilde;es autom&aacute;ticos integrados e monitorados.</p>
+				</section>
+			</section>
+		</section>
+
+		<section class="comoTrabalhamos">
+			<section class="comoCabecalho">
+				<p>Como trabalhamos</p>
+				<h1>Do projeto &agrave; entrega</h1>
+			</section>
+
+			<section class="etapas">
+				<section class="etapa">
+					<strong>01</strong>
+					<section>
+						<h2>Diagn&oacute;stico</h2>
+						<p>Visitamos o local, entendemos a necessidade e mapeamos as possibilidades.</p>
+					</section>
+				</section>
+				<section class="etapa">
+					<strong>02</strong>
+					<section>
+						<h2>Projeto</h2>
+						<p>Desenhamos a solu&ccedil;&atilde;o, definimos equipamentos e apresentamos o or&ccedil;amento.</p>
+					</section>
+				</section>
+				<section class="etapa">
+					<strong>03</strong>
+					<section>
+						<h2>Instala&ccedil;&atilde;o</h2>
+						<p>Executamos com padr&atilde;o de engenharia, organiza&ccedil;&atilde;o e testes em cada etapa.</p>
+					</section>
+				</section>
+				<section class="etapa">
+					<strong>04</strong>
+					<section>
+						<h2>Suporte</h2>
+						<p>Treinamento de uso, manuten&ccedil;&atilde;o preventiva e atendimento sempre que precisar.</p>
+					</section>
+				</section>
+			</section>
+		</section>
+
+		<footer class="rodape">
+			<section class="rodapeConteudo">
+				<section class="rodapeMarca">
+					<img class="rodapeLogo" src="img/Spinolacoisas/Logo/Logos%20Monocrom%C3%A1ticos/Monocrom%C3%A1tico%20png/Principal%20Negativo%20(branca).png" alt="Spinola Automacao">
+					<p>Solu&ccedil;&otilde;es inteligentes em automa&ccedil;&atilde;o residencial, comercial, industrial e seguran&ccedil;a. Tecnologia que comanda cada ambiente.</p>
+				</section>
+				<section class="rodapeColuna">
+					<h2>Navega&ccedil;&atilde;o</h2>
+					<a href="index.html">In&iacute;cio</a>
+					<a href="sobre.html">Sobre</a>
+					<a href="solucoes.html">Solu&ccedil;&otilde;es</a>
+					<a href="contato.html">Contato</a>
+				</section>
+				<section class="rodapeColuna">
+					<h2>Solu&ccedil;&otilde;es</h2>
+					<a href="solucoes.html">Residencial</a>
+					<a href="solucoes.html">Comercial &amp; Predial</a>
+					<a href="solucoes.html">Industrial</a>
+					<a href="solucoes.html">Seguran&ccedil;a</a>
+				</section>
+				<section class="rodapeColuna">
+					<h2>Contato</h2>
+					<p>WhatsApp: (00) 0 0000-0000</p>
+					<p>contato@spinolaautomacao.com.br</p>
+					<p>Seg a Sex, 8h &agrave;s 18h</p>
+				</section>
+			</section>
+			<section class="rodapeBase">
+				<p>&copy; 2026 Spinola Automa&ccedil;&atilde;o. Todos os direitos reservados.</p>
+			</section>
+		</footer>
+	</body>
 </html>

@@ -56,7 +56,7 @@ body{
 
 .menuLogo img{
 	display: block;
-	width: 150px;
+	width: 156px;
 	height: auto;
 }
 
@@ -92,12 +92,13 @@ body{
 	outline: 0;
 }
 
+/*aumentar tamanho da imagem do carrossel */
+
 .conteudoPrincipal{
 	margin: 0 auto;
 	padding: 0 0 24px;
 	text-align: center;
-	width: min(calc(70% + 15px), 100%);
-	max-width: 1280px;
+	width: min(calc(76% + 15px), 100%);
 }
 
 .paginaVazia{
@@ -105,8 +106,8 @@ body{
 }
 
 
-
-#moldura{
+/* imagem do carrossel*/
+#moldura{  
 	display: block;
 	margin: 0 auto;
 	max-width: 100%;
@@ -115,10 +116,26 @@ body{
 	transition: opacity 180ms ease;
 }
 
+/* Layout inferior (comentado — descomente junto com o HTML para voltar)
 .grupoBotao{
 	margin: 0 auto;
 	padding-top: 16px;
-	text-align: center;	
+	text-align: center;
+}
+*/
+
+/* Layout lateral (ativo) */
+.carrosselLateral{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.carrosselLateral #moldura{
+	flex: 1;
+	min-width: 0;
+	margin: 0;
 }
 
 

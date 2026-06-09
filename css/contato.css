@@ -24,18 +24,12 @@
 }
 
 .infoItem{
-	flex: 1 1 220px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 30px;
+	padding: 24px 22px 26px;
+	border-top: 4px solid var(--azul-principal);
 	background: #f7fbfd;
-	border-radius: 16px;
-	box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.116);
-	min-height: 50px;
+	box-shadow: 0 16px 34px rgba(27, 31, 60, 0.08);
+	text-align: center;
 }
-
 .infoItem h2{
 	color: var(--azul-principal);
 	font-size: 22px;

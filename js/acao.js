@@ -1,7 +1,7 @@
 const telas = [
-	"img/quadro1.png",
-	"img/quadro2.png",
-	"img/quadro3.png"
+	"img/imagem1.png",
+	"img/imagem2.png",
+	"img/imagem3.png"
 ];
 
 let telaAtual = 0;

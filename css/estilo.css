@@ -25,6 +25,7 @@ body{
 	margin: 0;
 	min-height: 100vh;
 	width: 100%;
+	overflow-x: hidden;
 	background: var(--branco);
 	color: var(--azul-escuro);
 	font-family: "Montserrat", Verdana, sans-serif;
@@ -44,7 +45,7 @@ body{
 	justify-content: space-between;
 	gap: 30px;
 	width: 100%;
-	padding: 18px 11%;
+	padding: 23px 11%;
 	background: var(--branco);
 	border-bottom: 1px solid rgba(27, 31, 60, 0.08);
 }
@@ -96,9 +97,9 @@ body{
 
 .conteudoPrincipal{
 	margin: 0 auto;
-	padding: 0 0 24px;
+	padding: 24px 0 54px;
 	text-align: center;
-	width: min(calc(76% + 15px), 100%);
+	width: min(90%, 1440px);
 }
 
 .paginaVazia{
@@ -129,7 +130,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 12px;
+	gap: 18px;
 }
 
 .carrosselLateral #moldura{
@@ -171,13 +172,13 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	min-height: auto;
-	padding: 118px 11% 124px;
+	padding: 138px 11% 144px;
 	background: var(--branco);
 }
 
 .fazemosCabecalho{
 	max-width: 1178px;
-	margin: 0 auto 34px;
+	margin: 0 auto 54px;
 }
 
 .fazemosCabecalho h1{
@@ -200,15 +201,18 @@ body{
 }
 
 .frentes{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 18px;
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: 24px;
 	max-width: 1178px;
 	margin: 0 auto;
 }
 
 .frente{
-	padding: 24px 22px 26px;
+	flex: 1 1 calc(25% - 24px);
+	min-width: 220px;
+	padding: 32px 22px 36px;
 	border-top: 4px solid var(--azul-principal);
 	background: #f7fbfd;
 	box-shadow: 0 16px 34px rgba(27, 31, 60, 0.08);
@@ -239,15 +243,15 @@ body{
 }
 
 .comoTrabalhamos{
-	margin-top: 46px;
-	padding: 56px 11%;
+	margin-top: 96px;
+	padding: 96px 11%;
 	background: #090d1b;
 	color: var(--branco);
 }
 
 .comoCabecalho{
 	max-width: 1178px;
-	margin: 0 auto 44px;
+	margin: 0 auto 60px;
 	text-align: center;
 }
 
@@ -275,15 +279,16 @@ body{
 }
 
 .etapa{
-	display: grid;
-	grid-template-columns: 110px 1fr;
+	display: flex;
+	align-items: flex-start;
 	gap: 28px;
-	padding: 30px 0;
+	padding: 38px 0;
 	border-bottom: 1px solid rgba(103, 198, 225, 0.18);
 	text-align: left;
 }
 
 .etapa strong{
+	flex: 0 0 82px;
 	color: var(--azul-principal);
 	font-family: "Space Grotesk", "Montserrat", Verdana, sans-serif;
 	font-size: 40px;
@@ -304,19 +309,163 @@ body{
 	line-height: 1.5;
 }
 
+.sobrePagina{
+	width: 100%;
+}
+
+.sobreAbertura{
+	display: flex;
+	align-items: center;
+	min-height: 540px;
+	padding: 96px 11%;
+	background: var(--azul-escuro);
+	color: var(--branco);
+}
+
+.sobreAberturaConteudo{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: min(780px, 100%);
+}
+
+.sobreEtiqueta{
+	margin: 0 0 18px;
+	color: var(--azul-principal);
+	font-family: "Space Grotesk", "Montserrat", Verdana, sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.sobreAbertura h1{
+	max-width: 700px;
+	margin: 0;
+	font-family: "Space Grotesk", "Montserrat", Verdana, sans-serif;
+	font-size: clamp(44px, 6vw, 76px);
+	line-height: 1.02;
+}
+
+.sobreIntroducao{
+	max-width: 720px;
+	margin: 28px 0 0;
+	color: #c8d1ea;
+	font-size: 20px;
+	line-height: 1.65;
+}
+
+.sobreConteudo{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 70px;
+	max-width: 1178px;
+	margin: 0 auto;
+	padding: 124px 0;
+}
+
+.sobreTexto{
+	display: flex;
+	flex: 1 1 580px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.sobreTexto h2,
+.sobreContato h2{
+	margin: 0;
+	font-family: "Space Grotesk", "Montserrat", Verdana, sans-serif;
+	font-size: 42px;
+	line-height: 1.12;
+}
+
+.sobreTexto > p:not(.sobreEtiqueta){
+	margin: 24px 0 0;
+	color: #52607b;
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+.sobreDestaques{
+	display: flex;
+	flex: 0 1 420px;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sobreDestaque{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 32px 24px;
+	border-left: 4px solid var(--azul-principal);
+	background: #f7fbfd;
+}
+
+.sobreDestaque strong{
+	color: var(--azul-escuro);
+	font-family: "Space Grotesk", "Montserrat", Verdana, sans-serif;
+	font-size: 28px;
+}
+
+.sobreDestaque span{
+	color: #52607b;
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.sobreContato{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	padding: 82px 11%;
+	background: #f1f8fb;
+}
+
+.sobreContato > section:first-child{
+	max-width: 650px;
+}
+
+.sobreContatoLinks{
+	display: flex;
+	flex: 0 1 350px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 14px;
+}
+
+.sobreContatoLinks a{
+	max-width: 100%;
+	color: var(--azul-escuro);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.45;
+	overflow-wrap: anywhere;
+	text-decoration-color: var(--azul-principal);
+	text-underline-offset: 5px;
+}
+
 .rodape{
 	margin-top: 0;
-	padding: 64px 11% 22px;
+	padding: 82px 11% 28px;
 	background: var(--azul-escuro);
 	color: var(--branco);
 }
 
 .rodapeConteudo{
-	display: grid;
-	grid-template-columns: 1.2fr 1fr 1fr 1.25fr;
-	gap: 70px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 50px;
 	max-width: 1178px;
 	margin: 0 auto;
+}
+
+.rodapeMarca{
+	flex: 1.2 1 260px;
 }
 
 .rodapeMarca p{
@@ -335,8 +484,14 @@ body{
 
 .rodapeColuna{
 	display: flex;
+	flex: 1 1 150px;
 	flex-direction: column;
 	gap: 18px;
+	min-width: 0;
+}
+
+.rodapeColuna:last-child{
+	flex-basis: 230px;
 }
 
 .rodapeColuna h2{
@@ -355,6 +510,7 @@ body{
 	color: #c8d1ea;
 	font-size: 17px;
 	line-height: 1.45;
+	overflow-wrap: anywhere;
 	text-decoration: none;
 }
 
@@ -369,8 +525,8 @@ body{
 	justify-content: flex-start;
 	gap: 20px;
 	max-width: 1178px;
-	margin: 48px auto 0;
-	padding-top: 28px;
+	margin: 60px auto 0;
+	padding-top: 34px;
 	border-top: 1px solid rgba(103, 198, 225, 0.22);
 	color: #9ba8cb;
 	font-size: 15px;
@@ -387,7 +543,7 @@ body{
 	.menuHorizontal{
 		position: relative;
 		flex-direction: row;
-		padding: 16px 22px;
+		padding: 20px 22px;
 		gap: 16px;
 	}
 
@@ -458,13 +614,25 @@ body{
 	}
 
 	.conteudoPrincipal{
-		padding-top: 0;
-		width: 92%;
+		padding: 18px 0 48px;
+		width: 94%;
+	}
+
+	.carrosselLateral{
+		gap: 10px;
+	}
+
+	.botao{
+		flex: 0 0 44px;
+		width: 44px;
+		height: 44px;
+		margin: 2px;
+		font-size: 30px;
 	}
 
 	.comoTrabalhamos{
-		margin-top: 28px;
-		padding: 42px 22px;
+		margin-top: 68px;
+		padding: 72px 22px;
 	}
 
 	.comoCabecalho h1{
@@ -477,11 +645,13 @@ body{
 	}
 
 	.etapa{
-		grid-template-columns: 1fr;
+		flex-direction: column;
 		gap: 14px;
+		padding: 36px 0;
 	}
 
 	.etapa strong{
+		flex-basis: auto;
 		font-size: 44px;
 	}
 
@@ -500,7 +670,11 @@ body{
 
 	.oQueFazemos{
 		min-height: auto;
-		padding: 44px 22px 46px;
+		padding: 58px 22px 62px;
+	}
+
+	.fazemosCabecalho{
+		margin-bottom: 44px;
 	}
 
 	.fazemosCabecalho h1{
@@ -508,11 +682,85 @@ body{
 	}
 
 	.frentes{
-		grid-template-columns: 1fr;
+		flex-direction: column;
+		gap: 22px;
+	}
+
+	.frente{
+		flex-basis: auto;
+		width: 100%;
 	}
 
 	.frente h3{
 		font-size: 28px;
+	}
+
+	.sobreAbertura{
+		min-height: auto;
+		padding: 84px 22px;
+	}
+
+	.sobreEtiqueta{
+		font-size: 15px;
+		letter-spacing: 4px;
+	}
+
+	.sobreAbertura h1{
+		font-size: 48px;
+	}
+
+	.sobreIntroducao{
+		font-size: 21px;
+		line-height: 1.6;
+	}
+
+	.sobreConteudo{
+		flex-direction: column;
+		gap: 44px;
+		padding: 78px 22px;
+	}
+
+	.sobreTexto,
+	.sobreDestaques{
+		flex-basis: auto;
+		width: 100%;
+	}
+
+	.sobreTexto h2,
+	.sobreContato h2{
+		font-size: 38px;
+	}
+
+	.sobreTexto > p:not(.sobreEtiqueta){
+		font-size: 20px;
+	}
+
+	.sobreDestaque strong{
+		font-size: 30px;
+	}
+
+	.sobreDestaque span{
+		font-size: 19px;
+	}
+
+	.sobreDestaque{
+		padding: 30px 24px;
+	}
+
+	.sobreContato{
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 32px;
+		padding: 68px 22px;
+	}
+
+	.sobreContatoLinks{
+		flex-basis: auto;
+		width: 100%;
+	}
+
+	.sobreContatoLinks a{
+		font-size: 20px;
 	}
 
 	.rodapeColuna h2{
@@ -520,17 +768,74 @@ body{
 	}
 
 	.rodape{
-		padding: 28px 22px;
+		padding: 42px 22px 32px;
 	}
 
 	.rodapeConteudo{
-		grid-template-columns: 1fr;
+		flex-direction: column;
 		gap: 34px;
+	}
+
+	.rodapeMarca,
+	.rodapeColuna{
+		flex-basis: auto;
+		width: 100%;
 	}
 
 	.rodapeBase{
 		align-items: flex-start;
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 520px){
+	.menuLogo img{
+		width: 142px;
+	}
+
+	.menuItem{
+		font-size: 21px;
+	}
+
+	.carrosselLateral{
+		flex-wrap: wrap;
+		padding-top: 12px;
+	}
+
+	.carrosselLateral #moldura{
+		flex-basis: 100%;
+		order: -1;
+	}
+
+	.botao{
+		flex-basis: 52px;
+		width: 52px;
+		height: 52px;
+	}
+
+	.fazemosCabecalho h1,
+	.comoCabecalho h1,
+	.sobreAbertura h1{
+		font-size: 38px;
+	}
+
+	.sobreTexto h2,
+	.sobreContato h2{
+		font-size: 32px;
+	}
+
+	.sobreIntroducao,
+	.sobreTexto > p:not(.sobreEtiqueta),
+	.frente p,
+	.etapa p,
+	.rodapeMarca p,
+	.rodapeColuna a,
+	.rodapeColuna p{
+		font-size: 19px;
+	}
+
+	.sobreContatoLinks a{
+		font-size: 19px;
 	}
 }
 
